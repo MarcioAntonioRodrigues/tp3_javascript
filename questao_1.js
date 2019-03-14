@@ -1,6 +1,6 @@
-var resp1 = document.getElementById('resp1');
 function tarefa01()
 {
+	var resp1 = document.getElementById('resp1');
 	let vmin = document.getElementById('vmin').value;
 	let vmax = document.getElementById('vmax').value;
 	if(vmin === '' || vmax === '')
@@ -9,13 +9,15 @@ function tarefa01()
 	}
 	else
 	{
+		// vmin = vmin.value;
+		// vmax = vmax.value;
 		if(vmin < vmax)
 		{
 			var a = 0;
 			var list = [];
 			for(var i = vmin; i < vmax; i++)
 			{
-				if(i % 2 === 0 && i % 3 === 0 && i !== 1 && i !== 1000000)
+				if(i % 2 === 0 && i % 3 === 0 && i !== vmin && i !== vmax)
 				{
 					list.push(i);
 				}

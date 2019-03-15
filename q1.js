@@ -1,11 +1,17 @@
 
+	// create elements
 	let q1 = document.getElementById("q1");
+	let h3 = document.createElement("h3");
 	let label1 = document.createElement("label");
 	let label2 = document.createElement("label");
 	let input1 = document.createElement("input");
 	let input2 = document.createElement("input");
 	let btn = document.createElement("button");
 	let paragraph = document.createElement("p");
+	
+	// insert css
+	h3.innerHTML = "Questao 1"
+	h3.style.marginTop = "0";
 
 	label1.innerHTML = "Valor minimo";
 	label1.style.display = "block";
@@ -20,8 +26,12 @@
 	input2.style.marginBottom = "20px";
 
 	btn.innerHTML = "Calcular";
-	btn.style.display = "block";
+	btn.classList.add("q1-btn");
 
+	q1.classList.add("q1-div");
+
+	// append elements in the div
+	q1.appendChild(h3);
 	q1.appendChild(label1);
 	q1.appendChild(input1);
 	q1.appendChild(label2);
@@ -29,6 +39,7 @@
 	q1.appendChild(btn);
 	q1.appendChild(paragraph);
 
+	// function
 	btn.onclick = function()
 	{
 		let vmin = input1.value;
@@ -58,5 +69,4 @@
 			}
 		}
 		paragraph.innerHTML = a;
-		console.log(paragraph.innerHTML);
 	}

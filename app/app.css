@@ -1,0 +1,14 @@
+.q1-btn
+{
+	display: block;
+	margin: auto;
+}
+.q1-div
+{
+	margin: 0 auto;
+    width: 200px;
+	text-align: center;
+	border: 1px solid black;
+	padding: 50px;
+	height: 200px;
+}

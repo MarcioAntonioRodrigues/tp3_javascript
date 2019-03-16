@@ -1,4 +1,7 @@
 
+
+function question_1()
+{
 	// create elements
 	let q1 = document.getElementById("q1");
 	let h3 = document.createElement("h3");
@@ -26,7 +29,7 @@
 	input2.style.marginBottom = "20px";
 
 	btn.innerHTML = "Calcular";
-	btn.classList.add("q1-btn");
+	btn.classList.add("q-btn");
 
 	q1.classList.add("q-div");
 
@@ -71,9 +74,14 @@
 		if(a != undefined)
 		{
 			paragraph.innerHTML = a;
+            paragraph.style.color = "black";
 		}
 		else
 		{
+            paragraph.style.color = "red";
 			paragraph.innerHTML = "Preencha todos os campos!";
 		}
 	}
+}
+
+question_1();

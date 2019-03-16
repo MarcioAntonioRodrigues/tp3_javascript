@@ -3,12 +3,13 @@
 	display: block;
 	margin: auto;
 }
-.q1-div
+.q-div
 {
-	margin: 0 auto;
+	margin: 20px auto;
     width: 200px;
 	text-align: center;
-	border: 1px solid black;
 	padding: 50px;
 	height: 200px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5);
 }

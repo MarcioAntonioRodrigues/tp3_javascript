@@ -28,7 +28,7 @@
 	btn.innerHTML = "Calcular";
 	btn.classList.add("q1-btn");
 
-	q1.classList.add("q1-div");
+	q1.classList.add("q-div");
 
 	// append elements in the div
 	q1.appendChild(h3);
@@ -68,5 +68,12 @@
 				window.alert("Valor mínimo precisa ser menor que valor máximo");
 			}
 		}
-		paragraph.innerHTML = a;
+		if(a != undefined)
+		{
+			paragraph.innerHTML = a;
+		}
+		else
+		{
+			paragraph.innerHTML = "Preencha todos os campos!";
+		}
 	}

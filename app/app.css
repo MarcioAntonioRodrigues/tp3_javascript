@@ -1,11 +1,13 @@
 body
 {
 	display: flex;
+	font-family: 'Courier New', Courier, monospace;
 }
 .q-btn
 {
 	display: block;
 	margin: auto;
+	margin-bottom: 20px;
 }
 .q-div
 {

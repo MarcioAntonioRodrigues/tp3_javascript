@@ -64,6 +64,7 @@ function quest_6()
 				localStorage.setItem(input1.value, input2.value);
 				window.alert("Usuario cadastrado com sucesso!");
 				cenarioInicial();
+				return;
 			}
 			else
 			{
@@ -87,6 +88,7 @@ function quest_6()
 			{
 				window.alert("Usuario ou senha incorretos");
 				cenarioInicial();
+				return;
 			}
 		}
 		validate_login = true;

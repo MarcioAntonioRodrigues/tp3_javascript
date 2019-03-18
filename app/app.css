@@ -1,3 +1,7 @@
+body
+{
+	display: flex;
+}
 .q-btn
 {
 	display: block;
@@ -5,11 +9,30 @@
 }
 .q-div
 {
-	margin: 20px auto;
-    width: 200px;
-	text-align: center;
+	margin: 20px;
 	padding: 50px;
-	height: 200px;
+	height: 100%;
+    min-height: 200px;
+	text-align: center;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5);
+}
+table
+{
+	border: 1px black solid;
+	border-collapse: collapse;
+	margin-top: 10px;
+	width: 200px;
+}
+
+td
+{
+	border: 1px black dashed;
+	padding: 5px;
+}
+tr:first-child td
+{
+	border: 1px black solid;
+	font-weight: bolder;
+	
 }

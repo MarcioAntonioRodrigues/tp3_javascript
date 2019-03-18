@@ -29,7 +29,7 @@ function quest_2()
     q2.appendChild(btn);
     q2.appendChild(paragraph);
 
-    btn.onclick = function tarefa02()
+    btn.onclick = function()
     {
         if(input.value !== '')
         {

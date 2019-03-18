@@ -42,7 +42,6 @@ q.appendChild(label2);
 q.appendChild(input2);
 q.appendChild(label3);
 q.appendChild(input3);
-q.appendChild(input3);
 q.appendChild(btn);
 
 btn.onclick = function()
@@ -50,32 +49,45 @@ btn.onclick = function()
     if(input1.value === '' || input2.value === ''|| input3.value === '')
     {
         window.alert("Preencha todos os campos!");
-    }
+	}
+	else if(parseInt(input2.value) > parseInt(input3.value))
+	{
+		window.alert("Valor minimo deve ser menor que valor maximo!");
+	}
     else
     {
-        let arr = [];
-        let numAle = 0;
-        for(var i = 0; i < input1.value; i++)
-        {
-            console.log(input2.value)
-            numAle = (Math.random() * input3.value) + input2.value;
-            numAle = parseInt(numAle).toFixed(0);
-            if(arr.includes(numAle))
-            {
-                console.log("encontrou");
-            }
-            else
-            {
-                console.log("não encontrou");
-                arr.push(numAle);
-            }
-        }
-        let orden = arr.sort(function(a,b)
-        {
-            return a-b;
-        })
-        p.innerHTML =  orden;
-        q.appendChild(p);
+		v = parseInt(input2.value) + parseInt(input3.value);
+		if(input1.value > v)
+		{
+			window.alert("Quantidade de numeros deve ser menor que a soma de valor minimo e valor maximo!");
+		}
+		else
+		{
+			let arr = [];
+			let numAle = 0;
+			for(var i = 0; i < input1.value; i++)
+			{
+				min = Math.ceil(input2.value);
+				  max = Math.floor(input3.value);
+				numAle = Math.floor(Math.random() * (max - min + 1)) + min;
+				numAle = parseInt(numAle).toFixed(0);
+				if(arr.includes(numAle))
+				{
+					// console.log("encontrou");
+				}
+				else
+				{
+					// console.log("não encontrou");
+					arr.push(numAle);
+				}
+			}
+			let orden = arr.sort(function(a,b)
+			{
+				return a-b;
+			})
+			p.innerHTML =  orden;
+			q.appendChild(p);
+		}
     }
     
 }
